@@ -16,7 +16,7 @@ body, html {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgb(47, 75, 115);
   padding: 10px 20px;
   z-index: 1000;
   color: white;
