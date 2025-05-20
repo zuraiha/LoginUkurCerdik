@@ -11,29 +11,36 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar">
+<nav class="navbar">
+  <div class="nav-top">
     <label class="menu-icon" onclick="openMenu()"><i class="fas fa-bars"></i></label>
-
-    <div class="nav-container">
-      <ul class="nav-left">
-        <li><a href="#">Utama</a></li>
-        <li><a href="#">Tentang UkurCerdik</a></li>
-        <li><a href="#">Produk <i class="fa fa-caret-down"></i></a></li>
-        <li><a href="#">Hubungi Kami</a></li>
-      </ul>
-
-      <div class="logo">
-        <img src="image/logoutama.png" alt="Ukur Cerdik" />
-      </div>
-
-      <ul class="nav-right">
-        <li><a href="#">Daftar</a></li>
-        <li><a href="#"><i class="fa fa-search"></i></a></li>
-        <li><a href="#"><i class="fa fa-user"></i></a></li>
-        <li><a href="#"><i class="fa fa-shopping-bag"></i><span class="badge">0</span></a></li>
-      </ul>
+    <div class="mobile-logo">
+      <img src="image/logoutama.png" alt="Ukur Cerdik" />
     </div>
-  </nav>
+  </div>
+
+  <div class="nav-container">
+    <ul class="nav-left">
+      <li><a href="https://ukur-cerdik.sprii-commerce.com/">Utama</a></li>
+      <li><a href="https://ukur-cerdik.sprii-commerce.com/pages/tentang-ukurcerdik">Tentang UkurCerdik</a></li>
+        <li class="dropdown">
+          <a href="#">Produk <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://ukur-cerdik.sprii-commerce.com/collections/pakej-analisis">Pakej Analisis</a></li>
+          </ul>
+        </li>
+      <li><a href="https://ukur-cerdik.sprii-commerce.com/pages/contact-us">Hubungi Kami</a></li>
+    </ul>
+
+    <div class="logo desktop-only">
+      <img src="image/logoutama.png" alt="Ukur Cerdik" />
+    </div>
+
+    <ul class="nav-right">
+      <li><a href="https://ukur-cerdik.sprii-commerce.com/pages/daftar">Daftar</a></li>
+    </ul>
+  </div>
+</nav>
 
   <!-- Sidebar Mobile Menu -->
   <div id="mobileMenu" class="mobile-menu">
