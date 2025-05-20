@@ -9,31 +9,53 @@
   <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
+
   <!-- Navbar -->
- <nav class="navbar">
-  <input type="checkbox" id="menu-toggle">
-  <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+  <nav class="navbar">
+    <label class="menu-icon" onclick="openMenu()"><i class="fas fa-bars"></i></label>
 
-  <div class="nav-container">
-    <ul class="nav-left">
-      <li><a href="https://ukur-cerdik.sprii-commerce.com/">Utama</a></li>
-      <li><a href="https://ukur-cerdik.sprii-commerce.com/pages/tentang-ukurcerdik">Tentang UkurCerdik</a></li>
-      <li><a href="#">Produk <i class="fa fa-caret-down"></i></a></li>
-      <li><a href="https://ukur-cerdik.sprii-commerce.com/pages/contact-us">Hubungi Kami</a></li>
-    </ul>
+    <div class="nav-container">
+      <ul class="nav-left">
+        <li><a href="#">Utama</a></li>
+        <li><a href="#">Tentang UkurCerdik</a></li>
+        <li><a href="#">Produk <i class="fa fa-caret-down"></i></a></li>
+        <li><a href="#">Hubungi Kami</a></li>
+      </ul>
 
-    <div class="logo">
-      <img src="image/logoutama.png" alt="Ukur Cerdik" />
+      <div class="logo">
+        <img src="image/logoutama.png" alt="Ukur Cerdik" />
+      </div>
+
+      <ul class="nav-right">
+        <li><a href="#">Daftar</a></li>
+        <li><a href="#"><i class="fa fa-search"></i></a></li>
+        <li><a href="#"><i class="fa fa-user"></i></a></li>
+        <li><a href="#"><i class="fa fa-shopping-bag"></i><span class="badge">0</span></a></li>
+      </ul>
     </div>
+  </nav>
 
-    <ul class="nav-right">
+  <!-- Sidebar Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="mobile-header">
+      <span>MENU</span>
+      <span class="close-btn" onclick="closeMenu()">&times;</span>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Enter a keyword" />
+      <button><i class="fa fa-arrow-right"></i></button>
+    </div>
+    <ul>
+      <li><a href="#">Utama</a></li>
+      <li><a href="#">Tentang UkurCerdik</a></li>
+      <li><a href="#">Produk <i class="fa fa-caret-down"></i></a></li>
+      <li><a href="#">Hubungi Kami</a></li>
       <li><a href="#">Daftar</a></li>
-      <li><a href="#"><i class="fa fa-search"></i></a></li>
-      <li><a href="#"><i class="fa fa-user"></i></a></li>
-      <li><a href="#"><i class="fa fa-shopping-bag"></i><span class="badge">0</span></a></li>
+      <li><a href="#">Log Masuk</a></li>
+      <li><a href="#">My Account</a></li>
     </ul>
   </div>
-</nav>
+  <div id="overlay" class="overlay" onclick="closeMenu()"></div>
 
   <!-- Background & Login -->
   <div class="background">
@@ -57,5 +79,17 @@
     </div>
     <footer>© 2025 Ukur Cerdik. All rights reserved.</footer>
   </div>
+
+  <!-- JavaScript -->
+  <script>
+    function openMenu() {
+      document.getElementById("mobileMenu").style.right = "0";
+      document.getElementById("overlay").style.display = "block";
+    }
+    function closeMenu() {
+      document.getElementById("mobileMenu").style.right = "-100%";
+      document.getElementById("overlay").style.display = "none";
+    }
+  </script>
 </body>
 </html>
