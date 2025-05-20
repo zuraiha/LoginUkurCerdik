@@ -2,93 +2,60 @@
 <html lang="ms">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login - Ukur Cerdik</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: linear-gradient(to right, #d9aa1e, #D0F0FD); /* lilac baby & baby blue */
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .topbar {
-      background-color: #e0a800;
-      color: white;
-      text-align: center;
-      padding: 8px 0;
-      font-weight: bold;
-      font-size: 16px;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    }
-
-    .page-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: calc(100vh - 40px); /* adjust for topbar */
-    }
-
-    .login-container {
-      display: flex;
-      align-items: center;
-      background-color: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-
-    .logo {
-      width: 150px;
-      height: auto;
-      margin-right: 40px;
-    }
-
-    .form-control {
-      border-radius: 10px;
-    }
-
-    .btn-primary {
-      background-color: #2aa6c1;
-      border: none;
-    }
-
-    .btn-primary:hover {
-      background-color: #ffbd59;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
+  <!-- Navbar -->
+ <nav class="navbar">
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
 
-  <!-- 🔶 Topbar -->
-  <div class="topbar">
-    FAHAM SAMPAI SKOR
+  <div class="nav-container">
+    <ul class="nav-left">
+      <li><a href="https://ukur-cerdik.sprii-commerce.com/">Utama</a></li>
+      <li><a href="https://ukur-cerdik.sprii-commerce.com/pages/tentang-ukurcerdik">Tentang UkurCerdik</a></li>
+      <li><a href="#">Produk <i class="fa fa-caret-down"></i></a></li>
+      <li><a href="https://ukur-cerdik.sprii-commerce.com/pages/contact-us">Hubungi Kami</a></li>
+    </ul>
+
+    <div class="logo">
+      <img src="image/logoutama.png" alt="Ukur Cerdik" />
+    </div>
+
+    <ul class="nav-right">
+      <li><a href="#">Daftar</a></li>
+      <li><a href="#"><i class="fa fa-search"></i></a></li>
+      <li><a href="#"><i class="fa fa-user"></i></a></li>
+      <li><a href="#"><i class="fa fa-shopping-bag"></i><span class="badge">0</span></a></li>
+    </ul>
   </div>
+</nav>
 
-  <!-- 🔽 Login form -->
-  <div class="page-wrapper">
-    <div class="login-container">
-      <img src="mainlogo-removebg-preview.png" alt="Ukur Cerdik Logo" class="logo" />
-      
-      <form action="#" method="POST" style="min-width: 300px;">
-        <h4 class="mb-4 text-center">Log Masuk Ukur Cerdik</h4>
-        <div class="mb-3">
-          <label for="username" class="form-label">Nama Pengguna</label>
-          <input type="text" class="form-control" id="username" name="username" required />
+  <!-- Background & Login -->
+  <div class="background">
+    <div class="login-box">
+      <h2>Login Now</h2>
+      <form>
+        <div class="input-group">
+          <label for="username"><i class="fa fa-user"></i> Username</label>
+          <input type="text" id="username" placeholder="Enter your username" />
         </div>
-        <div class="mb-4">
-          <label for="password" class="form-label">Kata Laluan</label>
-          <input type="password" class="form-control" id="password" name="password" required />
+        <div class="input-group">
+          <label for="password"><i class="fa fa-lock"></i> Password</label>
+          <input type="password" id="password" placeholder="Enter your password" />
         </div>
-        <div class="d-grid">
-          <button type="submit" class="btn btn-primary">Log Masuk</button>
+        <div class="options">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#">Forgot Password?</a>
         </div>
+        <button type="submit" class="login-btn">Login</button>
       </form>
     </div>
+    <footer>© 2025 Ukur Cerdik. All rights reserved.</footer>
   </div>
-
 </body>
 </html>
