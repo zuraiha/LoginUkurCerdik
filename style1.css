@@ -1,0 +1,206 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px 20px;
+  z-index: 1000;
+  color: white;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* Grid container to center logo */
+.nav-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+/* Left and Right Menus */
+.nav-left, .nav-right {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-left {
+  justify-content: flex-start;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.navbar a:hover {
+  color: #f0c330;
+}
+
+.badge {
+  background: #0d6efd;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  position: relative;
+  top: -8px;
+  margin-left: -8px;
+}
+
+/* ---------------- BACKGROUND ---------------- */
+.background {
+  background: url('image/background1.png') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ---------------- LOGIN BOX ---------------- */
+.login-box {
+  background: rgba(103, 102, 102, 0.8);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.login-box h2 {
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.options a {
+  color: #f0c330;
+  text-decoration: none;
+}
+
+.login-btn {
+  width: 100%;
+  background: #f0c330;
+  color: black;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #d4a80c;
+}
+
+footer {
+  margin-top: 20px;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .nav-container {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 10px 0;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-container {
+    display: flex;
+  }
+
+  .nav-left, .nav-right {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .logo {
+    margin: 10px 0;
+  }
+
+  .login-box {
+    padding: 30px 20px;
+  }
+}
