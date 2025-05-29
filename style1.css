@@ -1,3 +1,4 @@
+/* Reset & Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,9 +9,10 @@
 body, html {
   height: 100%;
   width: 100%;
+  background-color: #f0f1f2;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
   top: 0;
@@ -70,44 +72,33 @@ body, html {
   color: #f0c330;
 }
 
-.badge {
-  background: #0d6efd;
-  color: white;
-  font-size: 10px;
-  padding: 2px 6px;
-  border-radius: 10px;
-  position: relative;
-  top: -8px;
-  margin-left: -8px;
-}
-
-/* BACKGROUND  background: url('image/background1.png') no-repeat center center/cover;  */
-.background {
-  background-color: #F0F1F2; 
-  min-height: 100vh;
+/* ================= HERO SECTION ================= */
+.hero-section {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding-top: 120px;
-  padding-left: 20px;
-  padding-right: 20px;
+  min-height: 100vh;
+  padding: 120px 40px 40px 40px;
 }
 
-/* LOGIN BOX */
-.login-box {
-  background: rgba(0, 0, 0, 0.8);
+/* LOGIN FORM LEFT */
+.login-container {
+  background: #1a1a1a;
+  color: white;
   padding: 40px;
   border-radius: 10px;
   max-width: 400px;
   width: 100%;
-  text-align: center;
-  color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin-right: 40px;
 }
 
-.login-box h2 {
+.login-container h2 {
   margin-bottom: 25px;
   font-weight: 600;
+  font-size: 24px;
+  text-align: center;
 }
 
 .input-group {
@@ -158,14 +149,40 @@ body, html {
   background: #d4a80c;
 }
 
+/* TAGLINE RIGHT */
+.tagline {
+  max-width: 500px;
+  color: black;
+}
+
+.tagline h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.tagline h1 {
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.tagline p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ================= FOOTER ================= */
 footer {
-  margin-top: 20px;
-  color: white;
+  margin-top: 40px;
+  padding-bottom: 20px;
+  color: black;
   font-size: 13px;
   text-align: center;
 }
 
-/* SIDEBAR MENU (MOBILE) */
+/* ================= MOBILE NAV MENU ================= */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -231,7 +248,7 @@ footer {
   font-size: 16px;
 }
 
-/* Overlay */
+/* ================= OVERLAY ================= */
 .overlay {
   display: none;
   position: fixed;
@@ -243,46 +260,44 @@ footer {
   z-index: 1500;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  .menu-icon {
-    display: block;
+  .hero-section {
+    flex-direction: column;
+    padding-top: 140px;
   }
 
-  .nav-container {
-    display: none !important;
+  .login-container {
+    margin-right: 0;
+    margin-bottom: 30px;
   }
-}
 
-/* New layout for mobile logo in nav */
-.nav-top {
-  display: none;
-  background-color: #1f3c6d;
-  padding: 10px 20px;
-  align-items: center;
-  justify-content: space-between;
-}
+  .tagline {
+    text-align: center;
+  }
 
-.mobile-logo {
-  flex: 1;
-  text-align: center;
-}
+  .tagline h1 {
+    font-size: 36px;
+  }
 
-.mobile-logo img {
-  height: 40px;
-}
+  .tagline h3 {
+    font-size: 20px;
+  }
 
-.desktop-only {
-  display: flex;
-}
-
-@media (max-width: 768px) {
   .nav-container {
     display: none !important;
   }
 
   .nav-top {
     display: flex;
+    background-color: #1f3c6d;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-logo img {
+    height: 40px;
   }
 
   .desktop-only {
@@ -297,7 +312,7 @@ footer {
   }
 }
 
-/* Desktop dropdown (hover) */
+/* ================= DROPDOWNS ================= */
 .dropdown {
   position: relative;
 }
@@ -329,27 +344,4 @@ footer {
 
 .dropdown:hover .dropdown-menu {
   display: block;
-}
-
-/* Mobile dropdown */
-.mobile-dropdown-toggle {
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-  padding: 10px 0;
-}
-
-.mobile-submenu {
-  display: none;
-  list-style: none;
-  padding-left: 15px;
-}
-
-.mobile-submenu li {
-  margin: 8px 0;
-}
-
-.mobile-submenu li a {
-  color: white;
-  text-decoration: none;
 }
