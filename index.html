@@ -5,30 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login - Ukur Cerdik</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
 
-  <!-- Navbar -->
+<!-- Navbar -->
 <nav class="navbar">
-  <div class="nav-top">
-    <label class="menu-icon" onclick="openMenu()"><i class="fas fa-bars"></i></label>
-    <div class="mobile-logo">
-      <img src="image/logoutama.png" alt="Ukur Cerdik" />
-    </div>
-  </div>
 
   <div class="nav-container">
     <ul class="nav-left">
       <li><a href="https://ukur-cerdik.sprii-commerce.com/">Utama</a></li>
       <li><a href="https://ukur-cerdik.sprii-commerce.com/pages/tentang-ukurcerdik">Tentang UkurCerdik</a></li>
-        <li class="dropdown">
-          <a href="#">Produk <i class="fa fa-caret-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="https://ukur-cerdik.sprii-commerce.com/collections/pakej-analisis">Pakej Analisis</a></li>
-          </ul>
-        </li>
+      <li class="dropdown">
+        <a href="#">Produk <i class="fa fa-caret-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="https://ukur-cerdik.sprii-commerce.com/collections/pakej-analisis">Pakej Analisis</a></li>
+        </ul>
+      </li>
       <li><a href="https://ukur-cerdik.sprii-commerce.com/pages/contact-us">Hubungi Kami</a></li>
     </ul>
 
@@ -42,65 +36,77 @@
   </div>
 </nav>
 
-  <!-- Sidebar Mobile Menu -->
-  <div id="mobileMenu" class="mobile-menu">
-    <div class="mobile-header">
-      <span>MENU</span>
-      <span class="close-btn" onclick="closeMenu()">&times;</span>
-    </div>
-    <div class="search-box">
-      <input type="text" placeholder="Enter a keyword" />
-      <button><i class="fa fa-arrow-right"></i></button>
-    </div>
-    <ul>
-      <li><a href="https://ukur-cerdik.sprii-commerce.com/">Utama</a></li>
-      <li><a href="https://ukur-cerdik.sprii-commerce.com/pages/tentang-ukurcerdik">Tentang UkurCerdik</a></li>
-      <li class="dropdown">
-        <a href="#">Produk <i class="fa fa-caret-down"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="https://ukur-cerdik.sprii-commerce.com/collections/pakej-analisis">Pakej Analisis</a></li>
-        </ul>
-      </li>
-      <li></li>
-      <li><a href="https://ukur-cerdik.sprii-commerce.com/pages/contact-us">Hubungi Kami</a></li>
-      <li><a href="https://ukur-cerdik.sprii-commerce.com/pages/daftar">Daftar</a></li>
-    </ul>
+<!-- Sidebar Mobile Menu -->
+<div id="mobileMenu" class="mobile-menu">
+  <div class="mobile-header">
+    <span>MENU</span>
+    <span class="close-btn" onclick="closeMenu()">&times;</span>
   </div>
-  <div id="overlay" class="overlay" onclick="closeMenu()"></div>
+  <div class="search-box">
+    <input type="text" placeholder="Enter a keyword" />
+    <button><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <ul>
+    <li><a href="https://ukur-cerdik.sprii-commerce.com/">Utama</a></li>
+    <li><a href="https://ukur-cerdik.sprii-commerce.com/pages/tentang-ukurcerdik">Tentang UkurCerdik</a></li>
+    <li class="dropdown">
+      <a href="#">Produk <i class="fa fa-caret-down"></i></a>
+      <ul class="dropdown-menu">
+        <li><a href="https://ukur-cerdik.sprii-commerce.com/collections/pakej-analisis">Pakej Analisis</a></li>
+      </ul>
+    </li>
+    <li><a href="https://ukur-cerdik.sprii-commerce.com/pages/contact-us">Hubungi Kami</a></li>
+    <li><a href="https://ukur-cerdik.sprii-commerce.com/pages/daftar">Daftar</a></li>
+  </ul>
+</div>
+<div id="overlay" class="overlay" onclick="closeMenu()"></div>
 
-  <!-- Background & Login -->
-  <div class="background">
-    <div class="login-box">
-      <h2>Login Now</h2>
-      <form>
-        <div class="input-group">
-          <label for="username"><i class="fa fa-user"></i> Username</label>
-          <input type="text" id="username" placeholder="Enter your username" />
-        </div>
-        <div class="input-group">
-          <label for="password"><i class="fa fa-lock"></i> Password</label>
-          <input type="password" id="password" placeholder="Enter your password" />
-        </div>
-        <div class="options">
-          <label><input type="checkbox" /> Remember me</label>
-          <a href="#">Forgot Password?</a>
-        </div>
-        <button type="submit" class="login-btn">Login</button>
-      </form>
-    </div>
-    <footer>© 2025 Ukur Cerdik. All rights reserved.</footer>
+<!-- Hero Section: Login + Tagline -->
+<div class="hero-section">
+  <div class="login-container">
+    <h2>Login Now</h2>
+    <form>
+      <div class="input-group">
+        <label for="username"><i class="fa fa-user"></i> Username</label>
+        <input type="text" id="username" placeholder="Enter your username" />
+      </div>
+      <div class="input-group">
+        <label for="password"><i class="fa fa-lock"></i> Password</label>
+        <input type="password" id="password" placeholder="Enter your password" />
+      </div>
+      <div class="options">
+        <label><input type="checkbox" /> Remember me</label>
+        <a href="#">Forgot Password?</a>
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+    </form>
   </div>
 
-  <!-- JavaScript -->
-  <script>
-    function openMenu() {
-      document.getElementById("mobileMenu").style.right = "0";
-      document.getElementById("overlay").style.display = "block";
-    }
-    function closeMenu() {
-      document.getElementById("mobileMenu").style.right = "-100%";
-      document.getElementById("overlay").style.display = "none";
-    }
-  </script>
+  <div class="tagline">
+    <h3>Sukar tahu topik mana yang lemah?</h3>
+    <h1><strong>Kenali<br>UkurCerdik.</strong></h1>
+    <p>
+      UkurCerdik bantu kesan kelemahan pembelajaran anda.<br>
+      Dengan analisis pintar dan panduan langkah demi langkah,<br>
+      anda boleh fokus belajar topik yang betul.
+    </p>
+  </div>
+</div>
+
+<footer>© 2025 Ukur Cerdik. All rights reserved.</footer>
+
+<!-- JavaScript -->
+<script>
+  function openMenu() {
+    document.getElementById("mobileMenu").style.right = "0";
+    document.getElementById("overlay").style.display = "block";
+  }
+
+  function closeMenu() {
+    document.getElementById("mobileMenu").style.right = "-100%";
+    document.getElementById("overlay").style.display = "none";
+  }
+</script>
+
 </body>
 </html>
