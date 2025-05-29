@@ -84,7 +84,7 @@ body, html {
 /* BACKGROUND image/background1.png */
 .background {
   background: url('') no-repeat center center/cover; 
-  background color:#F2F2F2;
+  color:#F2F2F2;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
