@@ -81,9 +81,9 @@ body, html {
   margin-left: -8px;
 }
 
-/* BACKGROUND */
+/* BACKGROUND image/background1.png */
 .background {
-  background: url('image/background1.png') no-repeat center center/cover;
+  background: url('') no-repeat center center/cover; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
